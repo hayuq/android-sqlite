@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vibaratelist">
+        <item>始终</item>
+        <item>一律不</item>
+        <item>仅静音振动</item>
+        <item>仅非静音振动</item>
+    </string-array>
+</resources>
