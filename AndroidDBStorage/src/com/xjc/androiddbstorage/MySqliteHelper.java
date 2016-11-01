@@ -1,12 +1,13 @@
 package com.xjc.androiddbstorage;
 
-import android.R.anim;
-import android.R.integer;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * 自定义SQLiteHelper
+ */
 public class MySqliteHelper extends SQLiteOpenHelper {
 
 	public final String TABLE_NAME = "users";

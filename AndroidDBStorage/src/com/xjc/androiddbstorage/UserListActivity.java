@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -31,8 +30,6 @@ public class UserListActivity extends ListActivity {
 	private Cursor mCursor;
 	
 	private MySqliteHelper sqliteHelper;
-	private SQLiteDatabase sqliteDatabase;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,8 +43,7 @@ public class UserListActivity extends ListActivity {
 		/*使用SQLiteOpenHelper类*/
 		// 创建了一个MySqliteHelper对象，只执行这句话是不会创建或打开数据库连接的  
 		sqliteHelper = new MySqliteHelper(this, mDbOperation.DATABASE_NAME);
-		 // 只有调用了MySqliteHelper的getWritableDatabase()方法或者getReadableDatabase()方法之后，才会创建或打开一个连接 
-		sqliteDatabase = sqliteHelper.getWritableDatabase();
+		sqliteHelper.getWritableDatabase();
 	}
 
 	/**
